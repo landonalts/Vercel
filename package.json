@@ -2,14 +2,14 @@
   "name": "vercel-proxy",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  },
   "dependencies": {
-    "scramjet": "^3.2.0",
+    "scramjet": "^2.3.1",
     "node-fetch": "^3.3.1"
   },
   "engines": {
     "node": "22.x"
-  },
-  "scripts": {
-    "dev": "vercel dev"
   }
 }
