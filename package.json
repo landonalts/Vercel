@@ -1,0 +1,15 @@
+{
+  "name": "vercel-proxy",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "scramjet": "^3.2.0",
+    "node-fetch": "^3.3.1"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
