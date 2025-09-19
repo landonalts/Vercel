@@ -15,7 +15,7 @@ export default async function handler(req, res) {
       headers: {}
     };
 
-    // Forward headers
+    // Forward headers, except host/content-length
     for (const [key, value] of Object.entries(req.headers)) {
       if (!['host', 'content-length'].includes(key.toLowerCase())) {
         options.headers[key] = value;
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
     if (isText) {
       const stream = new DataStream(response.body)
         .map(chunk => chunk.toString())
-        .map(text => text); // optional transform
+        .map(text => text); // Optional transformations
 
       let result = '';
       await stream.forEach(chunk => result += chunk);
